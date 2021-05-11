@@ -1,4 +1,4 @@
-//keyboard entry
+//keyboard entry: the enter will not activate if I clicked the other button
 
 
 package sample;
