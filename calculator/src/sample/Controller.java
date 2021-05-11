@@ -334,4 +334,81 @@ public class Controller {
         list.clear();
         opStack.clear();
     }
+
+
+    //keyboard entry
+    public void clickCE(){
+        prev.clear();
+        input = "";
+        label.setText(input);
+    }
+    public void clickAC(){
+        text = "";
+        input = "";
+        prev.clear();
+        list.clear();
+        opStack.clear();
+        label.setText(input);
+        show.setText(text);
+    }
+    public void clickAnswer(){
+        list.add(input);
+        while (!opStack.isEmpty()){
+            list.add(opStack.peek());
+            opStack.pop();
+        }
+
+        Stack<Double> cal = new Stack<Double>();
+        boolean check = true;
+
+        for (int i = 0; i < list.size(); i++){
+            if (list.get(i) != "+" && list.get(i) != "-" && list.get(i) != "*" && list.get(i) != "/"){
+                cal.push(Double.parseDouble(list.get(i)));
+            }
+            else {
+                if (list.get(i) == "+"){
+                    double tmp2 = cal.peek();
+                    cal.pop();
+                    double tmp1 = cal.peek();
+                    cal.pop();
+                    cal.push(tmp1 + tmp2);
+                }
+                else if (list.get(i) == "-"){
+                    double tmp2 = cal.peek();
+                    cal.pop();
+                    double tmp1 = cal.peek();
+                    cal.pop();
+                    cal.push(tmp1 - tmp2);
+                }
+                else if (list.get(i) == "*"){
+                    double tmp2 = cal.peek();
+                    cal.pop();
+                    double tmp1 = cal.peek();
+                    cal.pop();
+                    cal.push(tmp1 * tmp2);
+                }
+                else {
+                    double tmp2 = cal.peek();
+                    cal.pop();
+                    double tmp1 = cal.peek();
+                    cal.pop();
+                    if (tmp2 == 0)
+                        check = false;
+                    cal.push(tmp1 / tmp2);
+                }
+            }
+        }
+
+        if (check)
+            input = Double.toString(cal.peek()); //round
+        else
+            input = "Error";
+        label.setText(input);
+        cal.clear();
+        text = "";
+        show.setText(text);
+        prev.clear();
+        list.clear();
+        opStack.clear();
+    }
 }
