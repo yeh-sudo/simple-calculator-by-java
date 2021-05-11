@@ -212,61 +212,51 @@ public class Controller {
 
 
     public void clickOne(ActionEvent e){
-        System.out.println("1");
         prev.add(input);
         input += "1";
         label.setText(input);
     }
     public void clickTwo(ActionEvent e){
-        System.out.println("2");
         prev.add(input);
         input += "2";
         label.setText(input);
     }
     public void clickThree(ActionEvent e){
-        System.out.println("3");
         prev.add(input);
         input += "3";
         label.setText(input);
     }
     public void clickFour(ActionEvent e){
-        System.out.println("4");
         prev.add(input);
         input += "4";
         label.setText(input);
     }
     public void clickFive(ActionEvent e){
-        System.out.println("5");
         prev.add(input);
         input += "5";
         label.setText(input);
     }
     public void clickSix(ActionEvent e){
-        System.out.println("6");
         prev.add(input);
         input += "6";
         label.setText(input);
     }
     public void clickSeven(ActionEvent e){
-        System.out.println("7");
         prev.add(input);
         input += "7";
         label.setText(input);
     }
     public void clickEight(ActionEvent e){
-        System.out.println("8");
         prev.add(input);
         input += "8";
         label.setText(input);
     }
     public void clickNine(ActionEvent e){
-        System.out.println("9");
         prev.add(input);
         input += "9";
         label.setText(input);
     }
     public void clickZero(ActionEvent e){
-        System.out.println("0");
         prev.add(input);
         input += "0";
         label.setText(input);
