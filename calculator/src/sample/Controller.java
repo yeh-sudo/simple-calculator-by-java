@@ -1,6 +1,4 @@
-//need to deal with: divide by 0 and round and negative number
-
-
+//keyboard entry
 
 
 package sample;
@@ -63,9 +61,8 @@ public class Controller {
     private String input = "";
     private String text = "";
     private ArrayList<String> prev = new ArrayList<String>();
-    private ArrayList<String> list = new ArrayList<String>(); //using data structure to calculate every answer
+    private ArrayList<String> list = new ArrayList<String>(); //using data structure to calculate the answer
     private Stack<String> opStack = new Stack<String>(); //stack of operator
-    //if the top of list is / , then enter the number again
 
 
     public int p(String x){
@@ -102,8 +99,12 @@ public class Controller {
         }
     }
     public void clickMinus(ActionEvent e){
-        if (input.length() == 0)
+        if (input.length() == 0) {
+            prev.add(input);
+            input += "-";
+            label.setText(input);
             return;
+        }
         if (input == ".")
             list.add(Double.toString(0.0));
         else
@@ -274,7 +275,6 @@ public class Controller {
 
 
     public void clickAnswer(ActionEvent e){
-        //TODO
         list.add(input);
         while (!opStack.isEmpty()){
             list.add(opStack.peek());
@@ -282,6 +282,7 @@ public class Controller {
         }
 
         Stack<Double> cal = new Stack<Double>();
+        boolean check = true;
 
         for (int i = 0; i < list.size(); i++){
             if (list.get(i) != "+" && list.get(i) != "-" && list.get(i) != "*" && list.get(i) != "/"){
@@ -314,12 +315,17 @@ public class Controller {
                     cal.pop();
                     double tmp1 = cal.peek();
                     cal.pop();
+                    if (tmp2 == 0)
+                        check = false;
                     cal.push(tmp1 / tmp2);
                 }
             }
         }
 
-        input = Double.toString(cal.peek());
+        if (check)
+            input = Double.toString(cal.peek()); //round
+        else
+            input = "Error";
         label.setText(input);
         cal.clear();
         text = "";
