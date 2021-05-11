@@ -281,6 +281,7 @@ public class Controller {
             opStack.pop();
         }
 
+        //calculate answer
         Stack<Double> cal = new Stack<Double>();
         boolean check = true;
 
@@ -358,6 +359,7 @@ public class Controller {
             opStack.pop();
         }
 
+        //calculate answer
         Stack<Double> cal = new Stack<Double>();
         boolean check = true;
 
