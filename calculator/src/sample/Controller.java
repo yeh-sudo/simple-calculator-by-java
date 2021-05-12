@@ -14,44 +14,6 @@ import java.util.*;
 
 public class Controller {
     @FXML
-    private Button Answer;
-    @FXML
-    private Button CE;
-    @FXML
-    private Button AC;
-    @FXML
-    private Button one;
-    @FXML
-    private Button two;
-    @FXML
-    private Button three;
-    @FXML
-    private Button four;
-    @FXML
-    private Button five;
-    @FXML
-    private Button six;
-    @FXML
-    private Button seven;
-    @FXML
-    private Button eight;
-    @FXML
-    private Button nine;
-    @FXML
-    private Button zero;
-    @FXML
-    private Button plus;
-    @FXML
-    private Button minus;
-    @FXML
-    private Button multi;
-    @FXML
-    private Button div;
-    @FXML
-    private Button dot;
-    @FXML
-    private Button backspace;
-    @FXML
     private Label show;
     @FXML
     private Label label;
