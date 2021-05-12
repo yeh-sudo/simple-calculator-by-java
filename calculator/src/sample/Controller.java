@@ -5,10 +5,8 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-import javax.swing.*;
 import java.util.*;
 
 
@@ -275,9 +273,8 @@ public class Controller {
             }
         }
 
-        //TODO
         if (check)
-            input = Double.toString(cal.peek()); //round
+            input = Double.toString(Math.round(cal.peek() * 10.0) / 10.0); //round
         else
             input = "Error";
         label.setText(input);
@@ -354,9 +351,8 @@ public class Controller {
             }
         }
 
-        //TODO
         if (check)
-            input = Double.toString(cal.peek()); //round
+            input = Double.toString(Math.round(cal.peek() * 10.0) / 10.0); //round
         else
             input = "Error";
         label.setText(input);
