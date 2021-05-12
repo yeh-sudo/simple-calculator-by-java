@@ -142,6 +142,8 @@ public class Controller {
     public void clickDot(ActionEvent e){
         if (input.charAt(input.length() - 1) == '.' && input.length() != 0)
             return;
+        if (input.charAt(input.length() - 2) == '.')
+            return;
         prev.add(input);
         input += ".";
         label.setText(input);
@@ -164,6 +166,8 @@ public class Controller {
         show.setText(text);
     }
     public void clickBackspace(ActionEvent e){
+        if (prev.isEmpty())
+            return;
         input = prev.get(prev.size() - 1);
         prev.remove(prev.size() - 1);
         label.setText(input);
