@@ -313,6 +313,7 @@ public class Controller {
             }
         }
 
+        //TODO
         if (check)
             input = Double.toString(cal.peek()); //round
         else
