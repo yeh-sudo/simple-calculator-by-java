@@ -487,8 +487,13 @@ public class Controller {
             }
         }
 
-        if (check)
-            input = Double.toString(Math.round(cal.peek() * 10.0) / 10.0); //round
+        if (check) {
+            double output = cal.peek();
+            if (output - (int)output != 0)
+                input = Double.toString(Math.round(cal.peek() * 10.0) / 10.0); //round
+            else
+                input = Integer.toString((int)output);
+        }
         else
             input = "Error";
         label.setText(input);
@@ -576,8 +581,13 @@ public class Controller {
             }
         }
 
-        if (check)
-            input = Double.toString(Math.round(cal.peek() * 10.0) / 10.0); //round
+        if (check) {
+            double output = cal.peek();
+            if (output - (int)output != 0)
+                input = Double.toString(Math.round(cal.peek() * 10.0) / 10.0); //round
+            else
+                input = Integer.toString((int)output);
+        }
         else
             input = "Error";
         label.setText(input);
