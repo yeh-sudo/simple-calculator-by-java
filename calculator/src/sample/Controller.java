@@ -41,6 +41,7 @@ public class Controller {
 
 
 
+    private boolean ch = false;
     private String input = "";
     private String text = "";
     private ArrayList<String> prev = new ArrayList<String>();
@@ -181,6 +182,7 @@ public class Controller {
 
 
     public void clickPlus(ActionEvent e){
+        ch = false;
         if (input.length() == 0)
             return;
         if (input == ".")
@@ -206,6 +208,7 @@ public class Controller {
         }
     }
     public void clickMinus(ActionEvent e){
+        ch = false;
         if (input.length() == 1 && input.charAt(0) == '-' && (text.charAt(text.length() - 1) == '+' || text.charAt(text.length() - 1) == '-' || text.charAt(text.length() - 1) == '*' || text.charAt(text.length() - 1) == '/'))
             return;
         if (input.length() == 0) {
@@ -237,6 +240,7 @@ public class Controller {
         }
     }
     public void clickMulti(ActionEvent e){
+        ch = false;
         if (input.length() == 0)
             return;
         if (input == ".")
@@ -263,6 +267,7 @@ public class Controller {
         }
     }
     public void clickDiv(ActionEvent e){
+        ch = false;
         if (input.length() == 0)
             return;
         if (input == ".")
@@ -301,6 +306,7 @@ public class Controller {
 
 
     public void clickCE(ActionEvent e){
+        ch = false;
         if (input.isEmpty()){
             text = "";
             input = "";
@@ -317,6 +323,7 @@ public class Controller {
         }
     }
     public void clickAC(ActionEvent e){
+        ch = false;
         text = "";
         input = "";
         prev.clear();
@@ -326,6 +333,7 @@ public class Controller {
         show.setText(text);
     }
     public void clickBackspace(ActionEvent e){
+        ch = false;
         if (prev.isEmpty())
             return;
         input = prev.get(prev.size() - 1);
@@ -341,6 +349,8 @@ public class Controller {
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
             return;
+        if (ch)
+            return;
         prev.add(input);
         input += "1";
         label.setText(input);
@@ -350,6 +360,8 @@ public class Controller {
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
+            return;
+        if (ch)
             return;
         prev.add(input);
         input += "2";
@@ -361,6 +373,8 @@ public class Controller {
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
             return;
+        if (ch)
+            return;
         prev.add(input);
         input += "3";
         label.setText(input);
@@ -370,6 +384,8 @@ public class Controller {
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
+            return;
+        if (ch)
             return;
         prev.add(input);
         input += "4";
@@ -381,6 +397,8 @@ public class Controller {
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
             return;
+        if (ch)
+            return;
         prev.add(input);
         input += "5";
         label.setText(input);
@@ -390,6 +408,8 @@ public class Controller {
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
+            return;
+        if (ch)
             return;
         prev.add(input);
         input += "6";
@@ -401,6 +421,8 @@ public class Controller {
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
             return;
+        if (ch)
+            return;
         prev.add(input);
         input += "7";
         label.setText(input);
@@ -410,6 +432,8 @@ public class Controller {
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
+            return;
+        if (ch)
             return;
         prev.add(input);
         input += "8";
@@ -421,6 +445,8 @@ public class Controller {
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
             return;
+        if (ch)
+            return;
         prev.add(input);
         input += "9";
         label.setText(input);
@@ -431,6 +457,8 @@ public class Controller {
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
             return;
+        if (ch)
+            return;
         prev.add(input);
         input += "0";
         label.setText(input);
@@ -439,6 +467,7 @@ public class Controller {
 
 
     public void clickAnswer(ActionEvent e){
+        ch = false;
         list.add(input);
         while (!opStack.isEmpty()){
             list.add(opStack.peek());
@@ -491,8 +520,10 @@ public class Controller {
             double output = cal.peek();
             if (output - (int)output != 0)
                 input = Double.toString(Math.round(cal.peek() * 10.0) / 10.0); //round
-            else
-                input = Integer.toString((int)output);
+            else {
+                input = Integer.toString((int) output);
+                ch = true;
+            }
         }
         else
             input = "Error";
@@ -508,6 +539,7 @@ public class Controller {
 
     //keyboard entry
     public void clickCE(){
+        ch = false;
         if (input.isEmpty()){
             text = "";
             input = "";
@@ -524,6 +556,7 @@ public class Controller {
         }
     }
     public void clickAC(){
+        ch = false;
         text = "";
         input = "";
         prev.clear();
@@ -533,6 +566,7 @@ public class Controller {
         show.setText(text);
     }
     public void clickAnswer(){
+        ch = false;
         list.add(input);
         while (!opStack.isEmpty()){
             list.add(opStack.peek());
@@ -585,8 +619,10 @@ public class Controller {
             double output = cal.peek();
             if (output - (int)output != 0)
                 input = Double.toString(Math.round(cal.peek() * 10.0) / 10.0); //round
-            else
-                input = Integer.toString((int)output);
+            else {
+                input = Integer.toString((int) output);
+                ch = true;
+            }
         }
         else
             input = "Error";
