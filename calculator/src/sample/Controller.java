@@ -59,6 +59,8 @@ public class Controller {
         }
     }
     public void clickMinus(ActionEvent e){
+        if (input.length() == 1 && input.charAt(0) == '-' && (text.charAt(text.length() - 1) == '+' || text.charAt(text.length() - 1) == '-' || text.charAt(text.length() - 1) == '*' || text.charAt(text.length() - 1) == '/'))
+            return;
         if (input.length() == 0) {
             prev.add(input);
             input += "-";
@@ -140,9 +142,9 @@ public class Controller {
         }
     }
     public void clickDot(ActionEvent e){
-        if (input.charAt(input.length() - 1) == '.' && input.length() != 0)
+        if (input.length() != 0 && input.charAt(input.length() - 1) == '.')
             return;
-        if (input.charAt(input.length() - 2) == '.')
+        if (prev.isEmpty() && input.length() >= 2 && input.charAt(input.length() - 2) == '.')
             return;
         prev.add(input);
         input += ".";

@@ -28,7 +28,7 @@ public class Main extends Application {
                         controller.clickCE();
                         break;
                     case ENTER:
-                        controller.clickAnswer(); //TODO
+                        controller.clickAnswer();
                         break;
                     default:
                         break;
