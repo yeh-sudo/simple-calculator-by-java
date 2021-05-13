@@ -4,13 +4,36 @@
 package sample;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.KeyEvent;
 
 import java.util.*;
 
 
 public class Controller {
+    @FXML
+    private Button one;
+    @FXML
+    private Button two;
+    @FXML
+    private Button three;
+    @FXML
+    private Button four;
+    @FXML
+    private Button five;
+    @FXML
+    private Button six;
+    @FXML
+    private Button seven;
+    @FXML
+    private Button eight;
+    @FXML
+    private Button nine;
+    @FXML
+    private Button zero;
     @FXML
     private Label show;
     @FXML
@@ -23,6 +46,130 @@ public class Controller {
     private ArrayList<String> prev = new ArrayList<String>();
     private ArrayList<String> list = new ArrayList<String>(); //using data structure to calculate the answer
     private Stack<String> opStack = new Stack<String>(); //stack of operator
+
+
+    private void keyPress(){
+        one.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent keyEvent) {
+                switch (keyEvent.getCode()){
+                    case ENTER:
+                        clickAnswer();
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
+        two.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent keyEvent) {
+                switch (keyEvent.getCode()){
+                    case ENTER:
+                        clickAnswer();
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
+        three.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent keyEvent) {
+                switch (keyEvent.getCode()){
+                    case ENTER:
+                        clickAnswer();
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
+        four.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent keyEvent) {
+                switch (keyEvent.getCode()){
+                    case ENTER:
+                        clickAnswer();
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
+        five.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent keyEvent) {
+                switch (keyEvent.getCode()){
+                    case ENTER:
+                        clickAnswer();
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
+        six.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent keyEvent) {
+                switch (keyEvent.getCode()){
+                    case ENTER:
+                        clickAnswer();
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
+        seven.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent keyEvent) {
+                switch (keyEvent.getCode()){
+                    case ENTER:
+                        clickAnswer();
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
+        eight.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent keyEvent) {
+                switch (keyEvent.getCode()){
+                    case ENTER:
+                        clickAnswer();
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
+        nine.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent keyEvent) {
+                switch (keyEvent.getCode()){
+                    case ENTER:
+                        clickAnswer();
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
+        zero.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent keyEvent) {
+                switch (keyEvent.getCode()){
+                    case ENTER:
+                        clickAnswer();
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
+    }
 
 
     public int p(String x){
@@ -189,51 +336,101 @@ public class Controller {
 
 
     public void clickOne(ActionEvent e){
+        keyPress();
+        if (input == "Error")
+            return;
+        if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
+            return;
         prev.add(input);
         input += "1";
         label.setText(input);
     }
     public void clickTwo(ActionEvent e){
+        keyPress();
+        if (input == "Error")
+            return;
+        if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
+            return;
         prev.add(input);
         input += "2";
         label.setText(input);
     }
     public void clickThree(ActionEvent e){
+        keyPress();
+        if (input == "Error")
+            return;
+        if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
+            return;
         prev.add(input);
         input += "3";
         label.setText(input);
     }
     public void clickFour(ActionEvent e){
+        keyPress();
+        if (input == "Error")
+            return;
+        if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
+            return;
         prev.add(input);
         input += "4";
         label.setText(input);
     }
     public void clickFive(ActionEvent e){
+        keyPress();
+        if (input == "Error")
+            return;
+        if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
+            return;
         prev.add(input);
         input += "5";
         label.setText(input);
     }
     public void clickSix(ActionEvent e){
+        keyPress();
+        if (input == "Error")
+            return;
+        if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
+            return;
         prev.add(input);
         input += "6";
         label.setText(input);
     }
     public void clickSeven(ActionEvent e){
+        keyPress();
+        if (input == "Error")
+            return;
+        if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
+            return;
         prev.add(input);
         input += "7";
         label.setText(input);
     }
     public void clickEight(ActionEvent e){
+        keyPress();
+        if (input == "Error")
+            return;
+        if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
+            return;
         prev.add(input);
         input += "8";
         label.setText(input);
     }
     public void clickNine(ActionEvent e){
+        keyPress();
+        if (input == "Error")
+            return;
+        if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
+            return;
         prev.add(input);
         input += "9";
         label.setText(input);
     }
     public void clickZero(ActionEvent e){
+        keyPress();
+        if (input == "Error")
+            return;
+        if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
+            return;
         prev.add(input);
         input += "0";
         label.setText(input);
