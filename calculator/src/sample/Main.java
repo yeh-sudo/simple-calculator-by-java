@@ -20,18 +20,20 @@ public class Main extends Application {
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent keyEvent) {
-                switch (keyEvent.getCode()){
-                    case A:
-                        controller.clickAC();
-                        break;
-                    case C:
-                        controller.clickCE();
-                        break;
-                    case ENTER:
-                        controller.clickAnswer();
-                        break;
-                    default:
-                        break;
+                try {
+                    switch (keyEvent.getCode()) {
+                        case A:
+                            controller.clickAC();
+                            break;
+                        case C:
+                            controller.clickCE();
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                catch (Exception e){
+                    return;
                 }
             }
         });

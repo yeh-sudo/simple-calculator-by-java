@@ -154,9 +154,20 @@ public class Controller {
 
 
     public void clickCE(ActionEvent e){
-        prev.clear();
-        input = "";
-        label.setText(input);
+        if (input.isEmpty()){
+            text = "";
+            input = "";
+            prev.clear();
+            list.clear();
+            opStack.clear();
+            label.setText(input);
+            show.setText(text);
+        }
+        else {
+            prev.clear();
+            input = "";
+            label.setText(input);
+        }
     }
     public void clickAC(ActionEvent e){
         text = "";
@@ -295,9 +306,20 @@ public class Controller {
 
     //keyboard entry
     public void clickCE(){
-        prev.clear();
-        input = "";
-        label.setText(input);
+        if (input.isEmpty()){
+            text = "";
+            input = "";
+            prev.clear();
+            list.clear();
+            opStack.clear();
+            label.setText(input);
+            show.setText(text);
+        }
+        else {
+            prev.clear();
+            input = "";
+            label.setText(input);
+        }
     }
     public void clickAC(){
         text = "";
