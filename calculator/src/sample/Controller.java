@@ -308,13 +308,7 @@ public class Controller {
     public void clickCE(ActionEvent e){
         ch = false;
         if (input.isEmpty()){
-            text = "";
-            input = "";
-            prev.clear();
-            list.clear();
-            opStack.clear();
-            label.setText(input);
-            show.setText(text);
+            return;
         }
         else {
             prev.clear();
@@ -546,13 +540,7 @@ public class Controller {
     public void clickCE(){
         ch = false;
         if (input.isEmpty()){
-            text = "";
-            input = "";
-            prev.clear();
-            list.clear();
-            opStack.clear();
-            label.setText(input);
-            show.setText(text);
+            return;
         }
         else {
             prev.clear();
