@@ -334,8 +334,13 @@ public class Controller {
     }
     public void clickBackspace(ActionEvent e){
         ch = false;
-        if (prev.isEmpty())
+        if (prev.isEmpty()){
+            if (text.isEmpty())
+                return;
+            text = text.replaceFirst(".$", "");
+            show.setText(text);
             return;
+        }
         input = prev.get(prev.size() - 1);
         prev.remove(prev.size() - 1);
         label.setText(input);
