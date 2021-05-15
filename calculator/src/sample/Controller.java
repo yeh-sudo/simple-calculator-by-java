@@ -15,30 +15,9 @@ import java.util.*;
 
 public class Controller {
     @FXML
-    private Button one;
-    @FXML
-    private Button two;
-    @FXML
-    private Button three;
-    @FXML
-    private Button four;
-    @FXML
-    private Button five;
-    @FXML
-    private Button six;
-    @FXML
-    private Button seven;
-    @FXML
-    private Button eight;
-    @FXML
-    private Button nine;
-    @FXML
-    private Button zero;
-    @FXML
     private Label show;
     @FXML
     private Label label;
-
 
 
     private boolean ch = false;
@@ -47,131 +26,6 @@ public class Controller {
     private ArrayList<String> prev = new ArrayList<String>();
     private ArrayList<String> list = new ArrayList<String>(); //using data structure to calculate the answer
     private Stack<String> opStack = new Stack<String>(); //stack of operator
-
-
-
-    private void keyPress(){
-        one.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent keyEvent) {
-                switch (keyEvent.getCode()){
-                    case ENTER:
-                        clickAnswer();
-                        break;
-                    default:
-                        break;
-                }
-            }
-        });
-        two.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent keyEvent) {
-                switch (keyEvent.getCode()){
-                    case ENTER:
-                        clickAnswer();
-                        break;
-                    default:
-                        break;
-                }
-            }
-        });
-        three.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent keyEvent) {
-                switch (keyEvent.getCode()){
-                    case ENTER:
-                        clickAnswer();
-                        break;
-                    default:
-                        break;
-                }
-            }
-        });
-        four.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent keyEvent) {
-                switch (keyEvent.getCode()){
-                    case ENTER:
-                        clickAnswer();
-                        break;
-                    default:
-                        break;
-                }
-            }
-        });
-        five.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent keyEvent) {
-                switch (keyEvent.getCode()){
-                    case ENTER:
-                        clickAnswer();
-                        break;
-                    default:
-                        break;
-                }
-            }
-        });
-        six.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent keyEvent) {
-                switch (keyEvent.getCode()){
-                    case ENTER:
-                        clickAnswer();
-                        break;
-                    default:
-                        break;
-                }
-            }
-        });
-        seven.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent keyEvent) {
-                switch (keyEvent.getCode()){
-                    case ENTER:
-                        clickAnswer();
-                        break;
-                    default:
-                        break;
-                }
-            }
-        });
-        eight.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent keyEvent) {
-                switch (keyEvent.getCode()){
-                    case ENTER:
-                        clickAnswer();
-                        break;
-                    default:
-                        break;
-                }
-            }
-        });
-        nine.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent keyEvent) {
-                switch (keyEvent.getCode()){
-                    case ENTER:
-                        clickAnswer();
-                        break;
-                    default:
-                        break;
-                }
-            }
-        });
-        zero.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent keyEvent) {
-                switch (keyEvent.getCode()){
-                    case ENTER:
-                        clickAnswer();
-                        break;
-                    default:
-                        break;
-                }
-            }
-        });
-    }
 
 
     public int p(String x){
@@ -330,8 +184,10 @@ public class Controller {
     public void clickBackspace(ActionEvent e){
         ch = false;
         if (prev.isEmpty()){
-            if (text.isEmpty())
+            if (text.isEmpty()) {
+                clickAC();
                 return;
+            }
             text = text.replaceFirst(".$", "");
             show.setText(text);
             return;
@@ -344,7 +200,7 @@ public class Controller {
 
 
     public void clickOne(ActionEvent e){
-        keyPress();
+//        keyPress();
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
@@ -356,7 +212,7 @@ public class Controller {
         label.setText(input);
     }
     public void clickTwo(ActionEvent e){
-        keyPress();
+//        keyPress();
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
@@ -368,7 +224,7 @@ public class Controller {
         label.setText(input);
     }
     public void clickThree(ActionEvent e){
-        keyPress();
+//        keyPress();
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
@@ -380,7 +236,7 @@ public class Controller {
         label.setText(input);
     }
     public void clickFour(ActionEvent e){
-        keyPress();
+//        keyPress();
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
@@ -392,7 +248,7 @@ public class Controller {
         label.setText(input);
     }
     public void clickFive(ActionEvent e){
-        keyPress();
+//        keyPress();
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
@@ -404,7 +260,7 @@ public class Controller {
         label.setText(input);
     }
     public void clickSix(ActionEvent e){
-        keyPress();
+//        keyPress();
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
@@ -416,7 +272,7 @@ public class Controller {
         label.setText(input);
     }
     public void clickSeven(ActionEvent e){
-        keyPress();
+//        keyPress();
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
@@ -428,7 +284,7 @@ public class Controller {
         label.setText(input);
     }
     public void clickEight(ActionEvent e){
-        keyPress();
+//        keyPress();
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
@@ -440,7 +296,7 @@ public class Controller {
         label.setText(input);
     }
     public void clickNine(ActionEvent e){
-        keyPress();
+//        keyPress();
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
@@ -452,7 +308,7 @@ public class Controller {
         label.setText(input);
     }
     public void clickZero(ActionEvent e){
-        keyPress();
+//        keyPress();
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
@@ -627,5 +483,267 @@ public class Controller {
         prev.clear();
         list.clear();
         opStack.clear();
+    }
+
+
+
+    public void clickOne(){
+//        keyPress();
+        if (input == "Error")
+            return;
+        if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
+            return;
+        if (ch)
+            return;
+        prev.add(input);
+        input += "1";
+        label.setText(input);
+    }
+    public void clickTwo(){
+//        keyPress();
+        if (input == "Error")
+            return;
+        if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
+            return;
+        if (ch)
+            return;
+        prev.add(input);
+        input += "2";
+        label.setText(input);
+    }
+    public void clickThree(){
+//        keyPress();
+        if (input == "Error")
+            return;
+        if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
+            return;
+        if (ch)
+            return;
+        prev.add(input);
+        input += "3";
+        label.setText(input);
+    }
+    public void clickFour(){
+//        keyPress();
+        if (input == "Error")
+            return;
+        if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
+            return;
+        if (ch)
+            return;
+        prev.add(input);
+        input += "4";
+        label.setText(input);
+    }
+    public void clickFive(){
+//        keyPress();
+        if (input == "Error")
+            return;
+        if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
+            return;
+        if (ch)
+            return;
+        prev.add(input);
+        input += "5";
+        label.setText(input);
+    }
+    public void clickSix(){
+//        keyPress();
+        if (input == "Error")
+            return;
+        if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
+            return;
+        if (ch)
+            return;
+        prev.add(input);
+        input += "6";
+        label.setText(input);
+    }
+    public void clickSeven(){
+//        keyPress();
+        if (input == "Error")
+            return;
+        if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
+            return;
+        if (ch)
+            return;
+        prev.add(input);
+        input += "7";
+        label.setText(input);
+    }
+    public void clickEight(){
+//        keyPress();
+        if (input == "Error")
+            return;
+        if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
+            return;
+        if (ch)
+            return;
+        prev.add(input);
+        input += "8";
+        label.setText(input);
+    }
+    public void clickNine(){
+//        keyPress();
+        if (input == "Error")
+            return;
+        if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
+            return;
+        if (ch)
+            return;
+        prev.add(input);
+        input += "9";
+        label.setText(input);
+    }
+    public void clickZero(){
+//        keyPress();
+        if (input == "Error")
+            return;
+        if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
+            return;
+        if (ch)
+            return;
+        prev.add(input);
+        input += "0";
+        label.setText(input);
+    }
+
+
+
+    public void clickPlus(){
+        ch = false;
+        if (input.length() == 0)
+            return;
+        if (input == ".")
+            list.add(Double.toString(0.0));
+        else
+            list.add(input);
+        prev.clear();
+        text += input;
+        text += "+";
+        show.setText(text);
+        input = "";
+        label.setText(input);
+        if (opStack.isEmpty())
+            opStack.push("+");
+        else{
+            if (p("+") >= p(opStack.peek())){
+                list.add(opStack.peek());
+                opStack.pop();
+                opStack.push("+");
+            }
+            else
+                opStack.push("+");
+        }
+    }
+    public void clickMinus(){
+        ch = false;
+        if (input.length() == 1 && input.charAt(0) == '-' && (text.charAt(text.length() - 1) == '+' || text.charAt(text.length() - 1) == '-' || text.charAt(text.length() - 1) == '*' || text.charAt(text.length() - 1) == '/'))
+            return;
+        if (input.length() == 0) {
+            prev.add(input);
+            input += "-";
+            label.setText(input);
+            return;
+        }
+        if (input == ".")
+            list.add(Double.toString(0.0));
+        else
+            list.add(input);
+        prev.clear();
+        text += input;
+        text += "-";
+        show.setText(text);
+        input = "";
+        label.setText(input);
+        if (opStack.isEmpty())
+            opStack.push("-");
+        else{
+            if (p("-") >= p(opStack.peek())){
+                list.add(opStack.peek());
+                opStack.pop();
+                opStack.push("-");
+            }
+            else
+                opStack.push("-");
+        }
+    }
+    public void clickMulti(){
+        ch = false;
+        if (input.length() == 0)
+            return;
+        if (input == ".")
+            list.add(Double.toString(0.0));
+        else
+            list.add(input);
+        prev.clear();
+        text += input;
+        text += "*";
+        show.setText(text);
+        input = "";
+        label.setText(input);
+        if (opStack.isEmpty())
+            opStack.push("*");
+        else {
+            if (p("*") < p(opStack.peek())){
+                opStack.push("*");
+            }
+            else {
+                list.add(opStack.peek());
+                opStack.pop();
+                opStack.push("*");
+            }
+        }
+    }
+    public void clickDiv(){
+        ch = false;
+        if (input.length() == 0)
+            return;
+        if (input == ".")
+            list.add(Double.toString(0.0));
+        else
+            list.add(input);
+        prev.clear();
+        text += input;
+        text += "/";
+        show.setText(text);
+        input = "";
+        label.setText(input);
+        if (opStack.isEmpty())
+            opStack.push("/");
+        else {
+            if (p("/") < p(opStack.peek())){
+                opStack.push("/");
+            }
+            else {
+                list.add(opStack.peek());
+                opStack.pop();
+                opStack.push("/");
+            }
+        }
+    }
+    public void clickDot(){
+        if (input.length() != 0 && input.charAt(input.length() - 1) == '.')
+            return;
+        if (prev.isEmpty() && input.length() >= 2 && input.charAt(input.length() - 2) == '.')
+            return;
+        prev.add(input);
+        input += ".";
+        label.setText(input);
+    }
+    public void clickBackspace(){
+        ch = false;
+        if (prev.isEmpty()){
+            if (text.isEmpty()) {
+                clickAC();
+                return;
+            }
+            text = text.replaceFirst(".$", "");
+            show.setText(text);
+            return;
+        }
+        input = prev.get(prev.size() - 1);
+        prev.remove(prev.size() - 1);
+        label.setText(input);
     }
 }
