@@ -200,7 +200,6 @@ public class Controller {
 
 
     public void clickOne(ActionEvent e){
-//        keyPress();
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
@@ -212,7 +211,6 @@ public class Controller {
         label.setText(input);
     }
     public void clickTwo(ActionEvent e){
-//        keyPress();
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
@@ -224,7 +222,6 @@ public class Controller {
         label.setText(input);
     }
     public void clickThree(ActionEvent e){
-//        keyPress();
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
@@ -236,7 +233,6 @@ public class Controller {
         label.setText(input);
     }
     public void clickFour(ActionEvent e){
-//        keyPress();
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
@@ -248,7 +244,6 @@ public class Controller {
         label.setText(input);
     }
     public void clickFive(ActionEvent e){
-//        keyPress();
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
@@ -260,7 +255,6 @@ public class Controller {
         label.setText(input);
     }
     public void clickSix(ActionEvent e){
-//        keyPress();
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
@@ -272,7 +266,6 @@ public class Controller {
         label.setText(input);
     }
     public void clickSeven(ActionEvent e){
-//        keyPress();
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
@@ -284,7 +277,6 @@ public class Controller {
         label.setText(input);
     }
     public void clickEight(ActionEvent e){
-//        keyPress();
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
@@ -296,7 +288,6 @@ public class Controller {
         label.setText(input);
     }
     public void clickNine(ActionEvent e){
-//        keyPress();
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
@@ -308,7 +299,6 @@ public class Controller {
         label.setText(input);
     }
     public void clickZero(ActionEvent e){
-//        keyPress();
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
@@ -488,7 +478,6 @@ public class Controller {
 
 
     public void clickOne(){
-//        keyPress();
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
@@ -500,7 +489,6 @@ public class Controller {
         label.setText(input);
     }
     public void clickTwo(){
-//        keyPress();
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
@@ -512,7 +500,6 @@ public class Controller {
         label.setText(input);
     }
     public void clickThree(){
-//        keyPress();
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
@@ -524,7 +511,6 @@ public class Controller {
         label.setText(input);
     }
     public void clickFour(){
-//        keyPress();
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
@@ -536,7 +522,6 @@ public class Controller {
         label.setText(input);
     }
     public void clickFive(){
-//        keyPress();
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
@@ -548,7 +533,6 @@ public class Controller {
         label.setText(input);
     }
     public void clickSix(){
-//        keyPress();
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
@@ -560,7 +544,6 @@ public class Controller {
         label.setText(input);
     }
     public void clickSeven(){
-//        keyPress();
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
@@ -572,7 +555,6 @@ public class Controller {
         label.setText(input);
     }
     public void clickEight(){
-//        keyPress();
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
@@ -584,7 +566,6 @@ public class Controller {
         label.setText(input);
     }
     public void clickNine(){
-//        keyPress();
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
@@ -596,7 +577,6 @@ public class Controller {
         label.setText(input);
     }
     public void clickZero(){
-//        keyPress();
         if (input == "Error")
             return;
         if (prev.isEmpty() && input.length() > 2 && input.charAt(input.length() - 2) == '.')
